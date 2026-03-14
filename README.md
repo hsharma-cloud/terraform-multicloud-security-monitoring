@@ -178,7 +178,7 @@ Azure Activity Logs
 
 ### Architecture Diagram
 
-[Download Architecture Diagram](docs/multicloud_security_monitoring_architecture_clean.pdf)
+![Architecture Diagram](docs/architecture.png)
 
 This diagram illustrates the monitoring pipelines for both AWS and Azure environments and shows how cloud activity logs flow through centralized logging and alerting services.
 
