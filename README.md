@@ -175,12 +175,9 @@ Azure Activity Logs
 → Action Groups
 
 ---
-
 ### Architecture Diagram
 
-![Architecture Diagram](docs/architecture.png)
-
-This diagram illustrates the monitoring pipelines for both AWS and Azure environments and shows how cloud activity logs flow through centralized logging and alerting services.
+![Multi-Cloud Security Monitoring Architecture](docs/architecture.png)
 
 ---
 
