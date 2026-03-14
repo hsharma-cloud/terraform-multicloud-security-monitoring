@@ -175,10 +175,61 @@ Azure Activity Logs
 → Action Groups
 
 ---
-### Architecture Diagram
+## Architecture Diagram
 
-![Multi-Cloud Security Monitoring Architecture](docs/architecture.png)
+```
+                Multi-Cloud Security Monitoring (Terraform Lab)
 
+                ┌───────────────────────────────┐
+                │           AWS Cloud           │
+                └───────────────────────────────┘
+
+                        AWS API Activity
+                               │
+                               ▼
+                         CloudTrail Logs
+                               │
+                               ▼
+                           S3 Bucket
+                       (Central Log Store)
+                               │
+                               ▼
+                         CloudWatch Logs
+                               │
+                               ▼
+                        Metric Filters
+                               │
+                               ▼
+                        CloudWatch Alarms
+                               │
+                               ▼
+                           SNS Alerts
+                               │
+                               ▼
+                        Security Team
+
+
+                ┌───────────────────────────────┐
+                │          Azure Cloud          │
+                └───────────────────────────────┘
+
+                        Azure Activity Logs
+                               │
+                               ▼
+                       Diagnostic Settings
+                               │
+                               ▼
+                    Log Analytics Workspace
+                               │
+                               ▼
+                        Azure Monitor Alerts
+                               │
+                               ▼
+                          Action Groups
+                               │
+                               ▼
+                        Security Team
+```
 ---
 
 ### Skills Demonstrated
