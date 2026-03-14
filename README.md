@@ -138,6 +138,46 @@ Terraform apply execution output showing successful resource creation.
 
 ![Terraform Apply Output](screenshots/terraform apply.png)
 
+
+
+
+## Terraform Deployment Workflow
+
+The infrastructure in this project was deployed using the standard Terraform workflow.
+
+```
+Developer
+   │
+   ▼
+Terraform Configuration (.tf files)
+   │
+   ▼
+terraform init
+   │
+   ▼
+terraform plan
+   │
+   ▼
+terraform apply
+   │
+   ▼
+Cloud Infrastructure Created
+   │
+   ▼
+AWS Security Monitoring Pipeline
+CloudTrail → S3 → CloudWatch → Metric Filters → CloudWatch Alarms
+```
+
+### Terraform Commands Used
+
+```
+terraform init
+terraform plan
+terraform apply
+terraform state list
+```
+
+This workflow ensures that infrastructure changes are reviewed before deployment and remain reproducible using Infrastructure as Code.
 Additional monitoring components:
 
 GuardDuty → threat detection  
