@@ -6,6 +6,42 @@ This project deploys centralized security monitoring infrastructure across AWS a
 
 The objective of this lab is to build a realistic enterprise-style security monitoring architecture using Infrastructure as Code.
 
+## Terraform Project Structure
+
+```
+terraform-multicloud-security-monitoring
+│
+├── README.md
+├── .gitignore
+│
+├── docs
+│   └── architecture.png
+│
+├── screenshots
+│
+└── terraform
+    │
+    ├── aws
+    │   │
+    │   ├── provider.tf
+    │   ├── s3.tf
+    │   │
+    │   └── future
+    │       ├── cloudtrail.tf
+    │       ├── cloudwatch.tf
+    │       └── sns_alerts.tf
+    │
+    └── azure
+        │
+        ├── provider.tf
+        │
+        └── future
+            ├── activity_logs.tf
+            ├── log_analytics.tf
+            └── monitor_alerts.tf
+```
+
+
 This project demonstrates:
 
 - Infrastructure as Code with Terraform
@@ -31,6 +67,11 @@ CloudWatch Logs → log ingestion
 Metric Filters → detect suspicious activity  
 CloudWatch Alarms → security alerts  
 SNS → alert notifications  
+
+
+
+
+
 
 Additional monitoring components:
 
