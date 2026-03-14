@@ -145,3 +145,49 @@ Steps planned:
 2. Create the S3 logging bucket
 3. Deploy CloudTrail
 4. Configure CloudWatch logging
+
+## Architecture Overview
+
+This project implements a **multi-cloud security monitoring architecture** using Terraform across AWS and Azure.
+
+The goal of this lab is to demonstrate how cloud security telemetry can be collected, centralized, and monitored using native cloud logging and alerting services.
+
+---
+
+### AWS Security Monitoring Pipeline
+
+AWS API Activity  
+→ CloudTrail  
+→ S3 Log Storage  
+→ CloudWatch Logs  
+→ Metric Filters  
+→ CloudWatch Alarms  
+→ SNS Alerts
+
+---
+
+### Azure Security Monitoring Pipeline
+
+Azure Activity Logs  
+→ Diagnostic Settings  
+→ Log Analytics Workspace  
+→ Azure Monitor Alerts  
+→ Action Groups
+
+---
+
+### Architecture Diagram
+
+[Download Architecture Diagram](docs/multicloud_security_monitoring_architecture_clean.pdf)
+
+This diagram illustrates the monitoring pipelines for both AWS and Azure environments and shows how cloud activity logs flow through centralized logging and alerting services.
+
+---
+
+### Skills Demonstrated
+
+- Cloud Security Architecture  
+- Terraform Infrastructure as Code (IaC)  
+- AWS Security Monitoring  
+- Azure Security Monitoring  
+- Detection Engineering
