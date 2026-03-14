@@ -68,10 +68,75 @@ Metric Filters → detect suspicious activity
 CloudWatch Alarms → security alerts  
 SNS → alert notifications  
 
+## Deployment Screenshots
 
+### Architecture Diagram
 
+![Architecture Diagram](screenshots/architecture.png)
 
+---
 
+### Terraform Initialization
+
+Terraform initialized successfully and downloaded required providers.
+
+![Terraform Init](screenshots/terraform-init-success.png)
+
+---
+
+### Terraform Plan – Initial State
+
+Initial Terraform plan before resources were created.
+
+![Terraform Plan Initial](screenshots/terraform-plan-no-resources.png)
+
+---
+
+### Terraform Plan – S3 Bucket Creation
+
+Terraform planning the creation of the S3 bucket used for CloudTrail log storage.
+
+![Terraform Plan S3](screenshots/terraform-plan-s3-bucket.png)
+
+---
+
+### Terraform Apply – CloudTrail Deployment
+
+Successful deployment of AWS CloudTrail logging infrastructure.
+
+![Terraform Apply CloudTrail](screenshots/terraform-apply-cloudtrail-success.png)
+
+---
+
+### Terraform Apply – CloudTrail Creation
+
+CloudTrail trail creation confirmation.
+
+![Terraform Apply CloudTrail](screenshots/terraform-apply-cloudtrail.png)
+
+---
+
+### Terraform Apply – CloudWatch Alarm
+
+CloudWatch alarm deployment for root account activity detection.
+
+![Terraform Apply Alarm](screenshots/terraform-apply-cloudwatch-alarm.png)
+
+---
+
+### Terraform State Resources
+
+Final Terraform state confirming all deployed infrastructure.
+
+![Terraform State](screenshots/terraform-state-resources.png)
+
+---
+
+### Terraform Apply Output
+
+Terraform apply execution output showing successful resource creation.
+
+![Terraform Apply Output](screenshots/terraform apply.png)
 
 Additional monitoring components:
 
