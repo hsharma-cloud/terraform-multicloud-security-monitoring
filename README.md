@@ -185,7 +185,22 @@ Terraform apply execution output showing successful resource creation.
 
 ![Terraform Apply Output](screenshots/terraform apply.png)
 
+## Azure Deployment
 
+### Terraform Deployment
+![Terraform Apply](screenshots/azure/terraform-apply.png)
+
+### Terraform Managed Resources
+![Terraform Managed Resources](screenshots/azure/terraform-managed-resources.png)
+
+### Log Analytics Workspace
+![Log Analytics Workspace](screenshots/azure/log-analytics-workspace.png)
+
+### Diagnostic Settings
+![Diagnostic Settings](screenshots/azure/diagnostic-settings.png)
+
+### Activity Log Alert
+![Activity Log Alert](screenshots/azure/activity-log-alert.png)
 
 
 ## Terraform Deployment Workflow
