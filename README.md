@@ -185,6 +185,8 @@ Terraform apply execution output showing successful resource creation.
 
 ![Terraform Apply Output](screenshots/terraform apply.png)
 
+![Activity Log Alert](screenshots/azure/activity-log-alert.png)
+
 ## Azure Deployment
 
 ### Terraform Deployment
@@ -201,7 +203,6 @@ Terraform apply execution output showing successful resource creation.
 
 ### Activity Log Alert
 ![Activity Log Alert](screenshots/azure/activity-log-alert.png)
-
 
 ## Terraform Deployment Workflow
 
