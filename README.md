@@ -2,9 +2,153 @@
 
 ## Overview
 
-This project deploys centralized security monitoring infrastructure across AWS and Azure using Terraform.
+## Project Goals
 
-The objective of this lab is to build a realistic enterprise-style security monitoring architecture using Infrastructure as Code.
+This project demonstrates how to build a **multi-cloud security monitoring architecture** using Terraform.
+
+The objective is to simulate how a security engineering team might deploy centralized monitoring across multiple cloud providers.
+
+Key goals of the project:
+
+- Deploy security telemetry collection in AWS and Azure
+- Centralize cloud activity logging
+- Detect suspicious activity using log analytics
+- Trigger automated security alerts
+- Demonstrate Infrastructure as Code using Terraform
+- Build a realistic cloud security engineering portfolio project
+
+---
+
+## Repository Structure
+
+```
+terraform-multicloud-security-monitoring
+│
+├── README.md
+├── docs
+│   └── architecture.png
+│
+├── screenshots
+│
+└── terraform
+    │
+    ├── aws
+    │   ├── provider.tf
+    │   ├── s3.tf
+    │   ├── cloudtrail.tf
+    │   ├── cloudwatch.tf
+    │   ├── metric_filters.tf
+    │   └── alarms.tf
+    │
+    └── azure
+        ├── provider.tf
+        ├── activity_logs.tf
+        ├── log_analytics.tf
+        └── monitor_alerts.tf
+```
+
+This structure separates Terraform infrastructure by cloud provider while keeping documentation and screenshots organized.
+
+---
+
+## Multi-Cloud Monitoring Architecture
+
+The project implements centralized monitoring pipelines across AWS and Azure.
+
+### AWS Security Monitoring Pipeline
+
+```
+AWS API Activity
+      │
+      ▼
+  CloudTrail
+      │
+      ▼
+  S3 Log Storage
+      │
+      ▼
+  CloudWatch Logs
+      │
+      ▼
+  Metric Filters
+      │
+      ▼
+  CloudWatch Alarms
+      │
+      ▼
+  SNS Security Alerts
+```
+
+### Azure Security Monitoring Pipeline
+
+```
+Azure Activity Logs
+        │
+        ▼
+Diagnostic Settings
+        │
+        ▼
+Log Analytics Workspace
+        │
+        ▼
+Azure Monitor Alerts
+        │
+        ▼
+Action Groups
+```
+
+These pipelines simulate how a **Security Operations team monitors cloud activity and detects potential threats**.
+---
+
+## Multi-Cloud Monitoring Architecture
+
+The project implements centralized monitoring pipelines across AWS and Azure.
+
+### AWS Security Monitoring Pipeline
+
+```
+AWS API Activity
+      │
+      ▼
+  CloudTrail
+      │
+      ▼
+  S3 Log Storage
+      │
+      ▼
+  CloudWatch Logs
+      │
+      ▼
+  Metric Filters
+      │
+      ▼
+  CloudWatch Alarms
+      │
+      ▼
+  SNS Security Alerts
+```
+
+### Azure Security Monitoring Pipeline
+
+```
+Azure Activity Logs
+        │
+        ▼
+Diagnostic Settings
+        │
+        ▼
+Log Analytics Workspace
+        │
+        ▼
+Azure Monitor Alerts
+        │
+        ▼
+Action Groups
+```
+
+These pipelines simulate how a **Security Operations team monitors cloud activity and detects potential threats**.
+
+
 
 ## Terraform Project Structure
 
@@ -321,10 +465,9 @@ Azure Activity Logs
 → Action Groups
 
 ---
-## Architecture Diagram
-
+## Multi-Cloud Monitoring Architecture
 ```
-                Multi-Cloud Security Monitoring (Terraform Lab)
+                Multi-Cloud Security Monitoring 
 
                 ┌───────────────────────────────┐
                 │           AWS Cloud           │
