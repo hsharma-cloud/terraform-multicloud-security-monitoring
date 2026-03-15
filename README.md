@@ -19,45 +19,35 @@ Key goals of the project:
 
 ---
 
-## Repository Structure
+### Azure Security Monitoring Pipeline
 
 ```
-terraform-multicloud-security-monitoring
-│
-├── README.md
-├── docs
-│   └── architecture.png
-│
-├── screenshots
-│
-└── terraform
-    │
-    ├── aws
-    │   ├── provider.tf
-    │   ├── s3.tf
-    │   ├── cloudtrail.tf
-    │   ├── cloudwatch.tf
-    │   ├── metric_filters.tf
-    │   └── alarms.tf
-    │
-    └── azure
-        ├── provider.tf
-        ├── activity_logs.tf
-        ├── log_analytics.tf
-        └── monitor_alerts.tf
+Azure Activity Logs
+        │
+        ▼
+Diagnostic Settings
+        │
+        ▼
+Log Analytics Workspace
+        │
+        ▼
+Azure Monitor Alerts
+        │
+        ▼
+Action Groups
 ```
 
-This structure separates Terraform infrastructure by cloud provider while keeping documentation and screenshots organized.
 
----
 
-## Multi-Cloud Monitoring Architecture
 
-The project implements centralized monitoring pipelines across AWS and Azure.
 
-### AWS Security Monitoring Pipeline
 
-```
+
+
+
+
+AWS Security Monitoring Pipeline
+
 AWS API Activity
       │
       ▼
@@ -77,75 +67,6 @@ AWS API Activity
       │
       ▼
   SNS Security Alerts
-```
-
-### Azure Security Monitoring Pipeline
-
-```
-Azure Activity Logs
-        │
-        ▼
-Diagnostic Settings
-        │
-        ▼
-Log Analytics Workspace
-        │
-        ▼
-Azure Monitor Alerts
-        │
-        ▼
-Action Groups
-```
-
-These pipelines simulate how a **Security Operations team monitors cloud activity and detects potential threats**.
----
-
-## Multi-Cloud Monitoring Architecture
-
-The project implements centralized monitoring pipelines across AWS and Azure.
-
-### AWS Security Monitoring Pipeline
-
-```
-AWS API Activity
-      │
-      ▼
-  CloudTrail
-      │
-      ▼
-  S3 Log Storage
-      │
-      ▼
-  CloudWatch Logs
-      │
-      ▼
-  Metric Filters
-      │
-      ▼
-  CloudWatch Alarms
-      │
-      ▼
-  SNS Security Alerts
-```
-
-### Azure Security Monitoring Pipeline
-
-```
-Azure Activity Logs
-        │
-        ▼
-Diagnostic Settings
-        │
-        ▼
-Log Analytics Workspace
-        │
-        ▼
-Azure Monitor Alerts
-        │
-        ▼
-Action Groups
-```
-
 These pipelines simulate how a **Security Operations team monitors cloud activity and detects potential threats**.
 
 
@@ -185,7 +106,6 @@ terraform-multicloud-security-monitoring
             └── monitor_alerts.tf
 ```
 
-
 This project demonstrates:
 
 - Infrastructure as Code with Terraform
@@ -195,13 +115,7 @@ This project demonstrates:
 - Threat detection
 - Compliance monitoring
 
-This repository is part of a cloud security portfolio designed to demonstrate Terraform and cloud security engineering capabilities.
-
 ---
-
-# Architecture
-
-The monitoring architecture is implemented across two cloud platforms.
 
 ## AWS Monitoring Architecture
 
@@ -465,60 +379,6 @@ Azure Activity Logs
 → Action Groups
 
 ---
-## Multi-Cloud Monitoring Architecture
-```
-                Multi-Cloud Security Monitoring 
-
-                ┌───────────────────────────────┐
-                │           AWS Cloud           │
-                └───────────────────────────────┘
-
-                        AWS API Activity
-                               │
-                               ▼
-                         CloudTrail Logs
-                               │
-                               ▼
-                           S3 Bucket
-                       (Central Log Store)
-                               │
-                               ▼
-                         CloudWatch Logs
-                               │
-                               ▼
-                        Metric Filters
-                               │
-                               ▼
-                        CloudWatch Alarms
-                               │
-                               ▼
-                           SNS Alerts
-                               │
-                               ▼
-                        Security Team
-
-
-                ┌───────────────────────────────┐
-                │          Azure Cloud          │
-                └───────────────────────────────┘
-
-                        Azure Activity Logs
-                               │
-                               ▼
-                       Diagnostic Settings
-                               │
-                               ▼
-                    Log Analytics Workspace
-                               │
-                               ▼
-                        Azure Monitor Alerts
-                               │
-                               ▼
-                          Action Groups
-                               │
-                               ▼
-                        Security Team
-```
 ---
 
 ### Skills Demonstrated
