@@ -36,12 +36,9 @@ Azure Monitor Alerts
         ▼
 Action Groups
 ```
-## AWS Security Monitoring Pipeline
-
-The AWS monitoring pipeline collects API activity, stores logs for auditing, analyzes events, and generates alerts when suspicious activity is detected.
-
 ### AWS Security Monitoring Pipeline
 
+```
 AWS API Activity
       │
       ▼
@@ -61,7 +58,7 @@ AWS API Activity
       │
       ▼
   SNS Security Alerts
-
+```
 
 ## Terraform Project Structure
 
